@@ -1,0 +1,37 @@
+.page#coupon-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page#coupon-page .grid {
+  flex: 1;
+}
+
+.modal-actions .button {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.coupon-modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  background: var(--white);
+  top: 25vh;
+  left: 25vw;
+  box-shadow: -1px 1px 4px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  justify-content: space-around;
+  text-align: center;
+  padding: 15px;
+}
+.coupon-modal .modal-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+.coupon-modal .err-msg {
+  font-size: 0.8em;
+  color: red;
+}

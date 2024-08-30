@@ -1,0 +1,15 @@
+services:
+  estacio-image:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    environment:
+      - PORT=8080
+      - FRONTEND_PORT=8081
+      - STORAGE_PATH=/home/app
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    working_dir: /home/app
+    volumes:
+      - ./:/home/app

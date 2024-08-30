@@ -1,0 +1,84 @@
+.grid-component {
+  height: 100%;
+  display: grid;
+  grid: 7fr 1fr / auto;
+}
+
+.grid-component .grid-table {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--font-color);
+  font-weight: 100;
+}
+
+.grid-component .grid-table .no-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  align-self: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.3);
+  text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.grid-component .grid-table td,
+.grid-component .grid-table th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.grid-component .grid-table tr:has(th) {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.grid-component .grid-table tr:has(td) {
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+.grid-component .grid-table tr:has(td):hover {
+  background: lightgray;
+}
+.grid-component .grid-table tr.selected {
+  background: gray;
+  color: white;
+}
+
+.grid-component .grid-actions {
+  display: flex;
+  align-items: center;
+}
+
+.grid-component .modal-actions .button,
+.grid-component .grid-actions .button {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.grid-component .grid-modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  background: var(--white);
+  top: 25vh;
+  left: 25vw;
+  box-shadow: -1px 1px 4px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  justify-content: space-around;
+  text-align: center;
+  padding: 15px;
+}
+.grid-component .grid-modal .modal-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+.grid-component .grid-modal .err-msg {
+  font-size: 0.8em;
+  color: red;
+}

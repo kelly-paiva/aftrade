@@ -1,0 +1,58 @@
+#login-page {
+  background: green;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./img/background.jpeg");
+  background-size: contain;
+}
+
+#login-page .form-box-shadow,
+#login-page #login-form {
+  background: var(--white);
+  border-radius: 30px;
+  width: 35%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  position: absolute;
+}
+
+#login-page #login-form {
+  z-index: 1;
+}
+#login-page .form-box-shadow {
+  box-shadow: -1px 1px 10px 2px rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+#login-page #login-form .message {
+  color: red;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+#login-page #login-form #logo {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#login-page #login-form #logo > img {
+  height: 100%;
+}
+
+#login-page .overlay {
+  background: var(--white);
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  box-shadow: -1px 1px 10px 2px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,20 @@
+@import "pages/style.css";
+@import "components/style.css";
+
+.form input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form input.main-btn[type="button"] {
+  cursor: pointer;
+  transition: background 0.2s ease;
+  transition-property: background, color;
+}
+.form input.main-btn[type="button"]:focus,
+.form input.main-btn[type="button"]:hover {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: var(--main);
+  color: white;
+}

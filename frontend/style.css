@@ -1,0 +1,21 @@
+@import "src/style.css";
+
+html,
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  color: var(--font-color);
+}
+
+.hidden {
+  display: none !important;
+}
+
+:root {
+  --white: #faf9f6;
+  --main: #d80104;
+  --font-color: #5b5b5b;
+}

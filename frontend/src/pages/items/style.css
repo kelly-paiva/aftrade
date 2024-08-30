@@ -1,0 +1,8 @@
+.page#items-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page#items-page .grid {
+  flex: 1;
+}

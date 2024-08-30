@@ -1,0 +1,92 @@
+#main-page {
+  background: green;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+/**
+ * ######## PAGE SKELETON ######## 
+ */
+#main-page .side-menu {
+  width: 5vw;
+  left: 0;
+  background: #faf7ec;
+}
+#main-page .main-section {
+  box-shadow: -1px 1px 4px 1px rgba(0, 0, 0, 0.3);
+  background: var(--white);
+  width: 100%;
+  height: 100%;
+}
+#main-page .main-section .page-tabber > img {
+  width: 7vw;
+  height: 7vh;
+}
+#main-page .main-section .page-tabber {
+  background: var(--white);
+  position: absolute;
+  top: calc(50% - 7vh);
+  left: 0;
+  border-radius: 15px 0 0 15px;
+}
+#main-page .main-section .page-tabber.under {
+  /*width: 7vw;*/
+  /*height: 7vh;*/
+  /*box-shadow: -1px 1px 10px 2px rgba(0, 0, 0, 0.5);*/
+  display: none;
+}
+
+/**
+ * ######## END PAGE SKELETON ######## 
+ */
+
+/**
+ * ######## SIDE MENU ######## 
+ */
+#side-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: gray;
+}
+#side-menu svg {
+  font-size: 1.4em;
+}
+#side-menu .entry {
+  padding: 5px;
+  border: solid;
+  border-width: 0 0 2px 0;
+  width: 100%;
+  text-align: center;
+  border-color: lightgray;
+  cursor: pointer;
+}
+
+#side-menu .entry .label {
+  display: none;
+}
+#side-menu .entry:hover .label {
+  display: inherit;
+}
+/**
+ * ######## END SIDE MENU ######## 
+ */
+
+/**
+ * ######## MAIN PAGE ######## 
+ */
+#main-page .container#page-container {
+  padding: 20px;
+  height: calc(100% - 40px);
+  display: flex;
+}
+
+#main-page .container#page-container .page {
+  flex: 1;
+}
+/**
+ * ######## END MAIN PAGE ######## 
+ */

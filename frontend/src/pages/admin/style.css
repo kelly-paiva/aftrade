@@ -1,0 +1,8 @@
+.page#admin-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page#admin-page .grid {
+  flex: 1;
+}

@@ -1,0 +1,9 @@
+@import "./login/style.css";
+@import "./main/style.css";
+@import "./items/style.css";
+@import "./admin/style.css";
+@import "./coupon/style.css";
+
+.page-title {
+  font-weight: normal;
+}
