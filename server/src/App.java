@@ -152,10 +152,10 @@ public class App {
             String username = (jsonBody.get("user").toString());
             String password = (jsonBody.get("pass").toString());
             
-            String token = app.authControl.authenticate(username, password);
+            String[] userData = app.authControl.authenticate(username, password);
             
-            if(token.length()>1){
-              return new Response(Server.SUCCESS_CODE, new JSONObject("{\"token\":\""+token+"\"}"));
+            if(userData.length>1 && userData[0].length()>1){
+              return new Response(Server.SUCCESS_CODE, new JSONObject("{\"token\":\""+userData[0]+"\", \"name\":\""+userData[1]+"\"}"));
             } else return new Response(Server.UNAUTHORIZED_CODE, new JSONObject("{\"msg\":\"Usuario ou Senha Invalido\"}"));
           } catch (Exception e) {
             return new Response(Server.INTERNAL_ERROR, new JSONObject("{\"error\":\"Erro ao manipular usuario\", \"msg\":\""+e.getMessage()+"\"}"));
@@ -165,6 +165,22 @@ public class App {
         @Override
         public boolean validateToken(String[] token){
           return true;
+        }
+      }));
+
+      arrRoutes.add(new Route("/ping", new Route.Callback(){
+        @Override
+        public Response call(String[] args, String body, String method){
+          try {
+            return new Response(Server.SUCCESS_CODE, new JSONObject("{\"pong\":\"pong\"}"));
+          } catch (Exception e) {
+            return new Response(Server.INTERNAL_ERROR, new JSONObject("{\"error\":\"Erro ao manipular usuario\", \"msg\":\""+e.getMessage()+"\"}"));
+          }
+        }
+
+        @Override
+        public boolean validateToken(String[] token){
+          return false;
         }
       }));
 

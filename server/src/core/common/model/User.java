@@ -47,6 +47,10 @@ public class User extends Storable {
     return this.data.get("pass");
   }
 
+  public String getName(){
+    return this.data.get("nome");
+  }
+
   @Override
   public User read(String key){
     return (User)super.read(key);

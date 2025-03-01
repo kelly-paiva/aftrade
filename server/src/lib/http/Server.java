@@ -72,6 +72,7 @@ public class Server {
           t.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
           t.getResponseHeaders().set("Access-Control-Allow-Headers", "authorization");
           t.getResponseHeaders().set("Access-Control-Allow-Methods", "POST,PUT,OPTIONS,DELETE,GET");
+          t.getResponseHeaders().set("Content-Type", "application/json");
           t.sendResponseHeaders(response.getCode(), responseString.length());
           OutputStream os = t.getResponseBody();
           os.write(responseString.getBytes());
